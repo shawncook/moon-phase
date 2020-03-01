@@ -6,3 +6,11 @@
 body {
 	@include starfield;
 }
+
+html {
+  height: 100%;
+  margin: 0px;
+  overflow-x: hidden;
+  padding: 0px;
+  width: 100%;
+}

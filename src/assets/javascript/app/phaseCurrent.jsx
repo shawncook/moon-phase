@@ -116,7 +116,7 @@ class PhaseCurrent extends Component {
           <Swipeable
             className="moon-phase"
             onSwipedLeft={() => this.onDayDecrement()}
-            onSwipedRight={() => this.onDayDecrement()}
+            onSwipedRight={() => this.onDayIncrement()}
           >
             <MoonPhase
               darkColor="#000725"
