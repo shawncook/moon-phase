@@ -1,0 +1,22 @@
+@import '../core/index';
+
+.nav {
+  @include container;
+  margin-bottom: 0;
+  padding-bottom: 0;
+
+  a {
+    display: table;
+    margin: 0 auto $spacer * 4 auto;
+    width: 50px;
+
+    &.active {
+      display: none;
+    }
+
+    svg {
+      object-fit: cover;
+      width: 100%;
+    }
+  }
+}

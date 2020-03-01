@@ -1,0 +1,105 @@
+.moon-phase {
+  animation-iteration-count: 1;
+  animation: moonrise 2s normal forwards ease-out;
+  display: table;
+  margin: 0 auto;
+  max-width: 80vw;
+
+  div {
+    transition: all 100ms;
+  }
+}
+
+.moon-phase--date {
+  @include font-base;
+  animation: fadeIn 2s normal forwards ease-out;
+  margin: 0;
+  text-align: center;
+  grid-column-start: 1;
+  grid-column-end: 3;
+
+  @media (min-width: $xsmall) {
+    grid-column-start: 2;
+  }
+}
+
+.moon-phase--phase-name {
+  @include font-base;
+  animation: moonrise 2s normal forwards ease-out;
+  letter-spacing: 1px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.moon-phase--wrapper {
+  align-items: center;
+  display: flex;
+  display: grid;
+  grid-gap: $spacer / 2;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 50px 1fr;
+  justify-content: space-between;
+  margin-bottom: $spacer;
+
+  @media (min-width: $xsmall) {
+    grid-gap: $spacer;
+    grid-template-columns: 50px 1fr 50px;
+    grid-template-rows: 1fr;
+    margin-bottom: $spacer * 2;
+  }
+}
+
+button.moon-phase--nav--left,
+button.moon-phase--nav--right {
+  animation: fadeIn 2s normal forwards ease-out;
+  animation-iteration-count: 1;
+  background: none;
+  border: 0;
+  color: inherit;
+  cursor: pointer;
+  font-size: 80px;
+  font: inherit;
+  margin: 0 auto;
+  max-width: 40px;
+  outline: none;
+
+  @media (min-width: $xsmall) {
+    margin: 0;
+    max-width: 50px;
+  }
+
+  &:active {
+    transform: scale(0.9);
+  }
+
+  svg {
+    fill: $color-purple;
+    height: auto;
+    max-width: 100px;
+    object-fit: cover;
+    width: 100%;
+  }
+}
+
+button.moon-phase--nav--left {
+  grid-row: 2;
+  transform: rotate(180deg);
+
+  @media (min-width: $xsmall) {
+    grid-row: 1;
+  }
+
+  &:active {
+    transform: rotate(180deg) scale(0.9);
+  }
+}
+
+button.moon-phase--nav--right {
+  grid-column: 2;
+  grid-row: 2;
+
+  @media (min-width: $xsmall) {
+    grid-column: 3;
+    grid-row: 1;
+  }
+}

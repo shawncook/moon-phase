@@ -1,0 +1,20 @@
+@import '../core/index';
+
+.header {
+  @include container;
+  animation: titleEntrance 2s normal forwards ease-out;
+  cursor: default;
+  padding-top: $spacer * 2;
+  text-align: center;
+
+  @media (min-width: $xsmall) {
+	  padding-top: $spacer * 4;
+	}
+}
+
+.header--headline {
+  @include font-site-title;
+  font-weight: 200;
+  letter-spacing: -1px;
+  margin: 0;
+}

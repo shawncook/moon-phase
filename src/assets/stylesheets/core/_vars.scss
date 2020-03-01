@@ -1,0 +1,31 @@
+/// Color palette.
+$color-black:       #000000;
+$color-lavender:    #a09ecc; // rgb(160,158,204)
+$color-pink:        #ffe2e8; // rgb(255,226,232)
+$color-purple-dark: #0e203e; // rgb(14,32,62)
+$color-purple:      #2d355a; // rgb(45,53,90)
+$color-slate:       #536987; // rgb(83,105,135)
+$color-white:       #ffffff;
+
+// Color variables.
+$color-site-background: $color-purple-dark;
+$color-nav-link: $color-lavender;
+$text-base:  $color-pink;
+$link-base:  $color-lavender;
+$link-hover: darken($color-slate, 20%);
+
+$heading-color-1: $color-purple;
+$heading-color-2: $color-slate;
+$heading-color-3: $color-slate;
+
+// Reusable size stack.
+$xsmall: 350px;
+$small:  500px;
+$medium: 800px;
+$large:  1000px;
+
+// Site vars.
+$site-max-width: 680px;
+
+// Spacers.
+$spacer: 1rem;

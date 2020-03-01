@@ -1,0 +1,11 @@
+@import '../core/index';
+
+.section--type-about {
+  @include font-step-down-2;
+  animation: fadeIn 1.4s normal forwards ease-out;
+  animation-iteration-count: 1;
+
+  @media (min-width: $xsmall) {
+    @include font-base;
+  }
+}

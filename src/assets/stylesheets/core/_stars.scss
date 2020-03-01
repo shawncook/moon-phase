@@ -1,0 +1,72 @@
+@function stars($n) {
+  $value: '#{random(2000)}px #{random(2000)}px #{$color-lavender}';
+
+  @for $i from 2 through $n {
+    $value: '#{$value} , #{random(2000)}px #{random(2000)}px #{$color-lavender}';
+  }
+
+  @return unquote($value);
+}
+
+@keyframes starsAnimation {
+  from {
+    transform: translateY(0) rotate(10deg);
+  }
+  to {
+    transform: translateY(-500px) rotate(0deg);
+  }
+}
+
+@mixin starfield {
+  $stars-small: stars(300);
+  $stars-medium: stars(100);
+
+  .stars {
+    z-index: -1;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    transition: opacity 1s ease-in-out;
+  }
+
+  .stars > .small {
+    width: 1px;
+    height: 1px;
+    background: transparent;
+    box-shadow: $stars-small;
+    animation: starsAnimation 50s linear infinite;
+    transform-origin: center;
+
+    &:after {
+      content: " ";
+      position: absolute;
+      top: 2000px;
+      width: 1px;
+      height: 1px;
+      background: transparent;
+      box-shadow: $stars-small;
+    }
+  }
+
+  .stars > .medium {
+    width: 2px;
+    height: 2px;
+    background: transparent;
+    box-shadow: $stars-medium;
+    animation: starsAnimation 100s linear infinite;
+    transform-origin: center;
+
+    &:after {
+      content: " ";
+      position: absolute;
+      top: 2000px;
+      width: 2px;
+      height: 2px;
+      background: transparent;
+      box-shadow: $stars-medium;
+    }
+  }
+}
