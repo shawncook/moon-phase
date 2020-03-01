@@ -3,8 +3,9 @@
 @import './structure';
 @import './components/index';
 
+html,
 body {
-	@include starfield;
+  overscroll-behavior: none;
 }
 
 html {
@@ -13,4 +14,8 @@ html {
   overflow-x: hidden;
   padding: 0px;
   width: 100%;
+}
+
+body {
+	@include starfield;
 }
