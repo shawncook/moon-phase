@@ -15,7 +15,13 @@ npm run start
 Build javascript and stylesheets:
 
 ```sh
-npm run build-js && npm run build-css
+npm run build
+```
+
+Watch javascript and stylesheets for changes:
+
+```sh
+npm run dev
 ```
 
 ## Author
