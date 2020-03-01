@@ -11,11 +11,11 @@ body {
 html {
   height: 100%;
   margin: 0px;
-  overflow-x: hidden;
-  padding: 0px;
-  width: 100%;
+  overflow: hidden;
 }
 
 body {
 	@include starfield;
+  height: 100%;
+  overflow: auto;
 }
