@@ -6,7 +6,8 @@ import { useSwipeable, Swipeable } from 'react-swipeable'
 import classNames from 'classnames';
 import dompurify from 'dompurify';
 import MoonPhase from 'react-moon';
-import getMoonPhaseForDate from '../services/getMoonPhaseForDate';
+import SunCalc from 'suncalc';
+import getPhaseName from '../services/getPhaseName';
 import Chevron from '../../../../static/images/chevron.svg';
 
 class PhaseCurrent extends Component {
@@ -65,17 +66,13 @@ class PhaseCurrent extends Component {
     const {
       data,
     } = this.props;
-
     const {
       date,
     } = this.state;
-
     const parsedDate = moment(date);
-    const year = parseInt(parsedDate.format('YYYY'), 10);
-    const month = parseInt(parsedDate.format('MM'), 10) - 1;
-    const day = parseInt(parsedDate.format('DD'), 10);
-    const phase = getMoonPhaseForDate(year, month, day);
-
+    const phaseObj = SunCalc.getMoonIllumination(parsedDate);
+    const label = getPhaseName(phaseObj);
+    const phase = phaseObj['phase'];
     return (
       <section
         className={
@@ -92,7 +89,10 @@ class PhaseCurrent extends Component {
           >
             <Chevron />
           </button>
-          <h3 className="moon-phase--date">
+          <h3
+            className="moon-phase--date"
+            title={moment(date).format('MM-DD-YYYY')}
+          >
             <Moment
               calendar={{
                 lastDay : '[Yesterday]',
@@ -121,13 +121,13 @@ class PhaseCurrent extends Component {
             <MoonPhase
               darkColor="#000725"
               lightColor="#ffe2e8"
-              phase={Number.parseFloat(phase.value)}
+              phase={phase}
               size={200}
             />
           </Swipeable>
         </div>
         <h4 className="moon-phase--phase-name">
-          {phase.label}
+          {label}
         </h4>
       </section>
     );

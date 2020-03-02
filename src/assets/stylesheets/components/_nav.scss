@@ -8,7 +8,17 @@
   a {
     display: table;
     margin: 0 auto $spacer * 4 auto;
+    opacity: 0.8;
+    transform: translateY(4px);
+    transition: transform 200ms ease-in, opacity 200ms ease-in;
     width: 50px;
+
+    &:hover,
+    &:focus {
+      opacity: 1;
+      outline: none;
+      transform: translateY(0);
+    }
 
     &.active {
       display: none;

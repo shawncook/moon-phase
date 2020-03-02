@@ -36,17 +36,31 @@ $font-accent: 'Megrim', Helvetica, sans-serif;
 }
 
 @mixin font-site-title {
-  background: -webkit-linear-gradient($color-lavender, $color-slate);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   font-family: $font-accent;
   text-transform: uppercase;
-  text-shadow: 0 2px 0 0px hsl(330, 100%, 25%);
-  font-size: 30px;
+  font-size: 34px;
   line-height: 1.3;
 
-  @media (min-width: $medium) {
-    font-size: 64px;
+  a {
+    color: $color-pink;
+    text-shadow:
+      0 0 0 $color-lavender,
+      0 0 10px $color-lavender,
+      0 0 20px $color-lavender;
+    transition: text-shadow 150ms ease-out;
+
+    &:hover,
+    &:focus {
+      outline: none;
+      text-shadow:
+        0 0 0 $color-pink,
+        0 0 30px $color-pink,
+        0 0 40px $color-pink;
+      }
+  }
+
+  @media (min-width: $small) {
+    font-size: 50px;
     line-height: 1.2;
   }
 }

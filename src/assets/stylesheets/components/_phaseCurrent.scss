@@ -4,19 +4,18 @@
   display: table;
   margin: 0 auto;
   max-width: 80vw;
-
-  div {
-    transition: all 100ms;
-  }
 }
 
 .moon-phase--date {
   @include font-base;
   animation: fadeIn 2s normal forwards ease-out;
   margin: 0;
+  overflow: hidden;
   text-align: center;
   grid-column-start: 1;
   grid-column-end: 3;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 
   @media (min-width: $xsmall) {
     grid-column-start: 2;
@@ -57,7 +56,6 @@ button.moon-phase--nav--right {
   border: 0;
   color: inherit;
   cursor: pointer;
-  font-size: 80px;
   font: inherit;
   margin: 0 auto;
   max-width: 40px;
@@ -65,15 +63,18 @@ button.moon-phase--nav--right {
 
   @media (min-width: $xsmall) {
     margin: 0;
-    max-width: 50px;
   }
 
   &:active {
     transform: scale(0.9);
   }
 
+  &:focus {
+    transform: scale(1.2);
+  }
+
   svg {
-    fill: $color-purple;
+    fill: $color-lavender;
     height: auto;
     max-width: 100px;
     object-fit: cover;
@@ -91,6 +92,10 @@ button.moon-phase--nav--left {
 
   &:active {
     transform: rotate(180deg) scale(0.9);
+  }
+
+  &:focus {
+    transform: rotate(180deg) scale(1.2);
   }
 }
 

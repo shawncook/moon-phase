@@ -12,12 +12,14 @@ html {
   height: 100%;
   margin: 0px;
   overflow: hidden;
+  width: 100%;
 }
 
 body {
 	@include starfield;
   height: 100%;
   overflow: auto;
+  width: 100%;
 }
 
 #app {
