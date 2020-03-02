@@ -9,7 +9,7 @@
 body {
   @include font-base;
   background: $color-site-background;
-  background: linear-gradient($color-site-background, $color-black);
+  background: linear-gradient($color-site-background, $color-black) !important;
   font-family: $font-sans-serif;
   margin: 0;
   overflow-x: hidden;
