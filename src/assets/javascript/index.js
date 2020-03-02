@@ -8,8 +8,8 @@ import './../stylesheets/app.scss';
 ReactDOM.render(
   <BrowserRouter>
     <App
-			data={data}
-		/>
+      data={data}
+    />
   </BrowserRouter>,
-	document.getElementById('app')
+  document.getElementById('app')
 );

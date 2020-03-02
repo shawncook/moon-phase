@@ -7,7 +7,7 @@ const Header = ({ data }) => {
       {data.title && (
         <h1 className="header--headline">
           <NavLink exact to="/" activeClassName="active">
-	          {data.title}
+            {data.title}
           </NavLink>
         </h1>
       )}
