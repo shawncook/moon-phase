@@ -1,3 +1,7 @@
+# Moon Phase App
+
+https://moon-phase.herokuapp.com
+
 ## Install
 
 ```sh
