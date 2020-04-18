@@ -1,6 +1,9 @@
 {
   "name": "moon-phase",
   "version": "1.0.0",
+  "engines": {
+    "node": "8.16.x"
+  },
   "private": true,
   "main": "moon-phase.js",
   "author": "",
