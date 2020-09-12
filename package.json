@@ -1,6 +1,5 @@
 {
   "name": "moon-phase",
-  "homepage": "http://shawncook.github.io/moon-phase",
   "version": "1.0.0",
   "engines": {
     "node": "8.16.x"
@@ -28,7 +27,6 @@
     "@babel/preset-react": "^7.9.4",
     "babel-loader": "^8.1.0",
     "css-loader": "^3.5.2",
-    "gh-pages": "^3.1.0",
     "node-sass": "^4.8.3",
     "react-moon": "^2.0.1",
     "react-svg-loader": "^3.0.3",
@@ -45,8 +43,6 @@
   "scripts": {
     "start": "node server.js",
     "build": "webpack --mode=production",
-    "dev": "webpack --mode=development --watch",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "dev": "webpack --mode=development --watch"
   }
 }
