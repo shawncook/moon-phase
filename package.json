@@ -1,5 +1,6 @@
 {
   "name": "moon-phase",
+  "homepage": "https://shawncook.github.io/moon-phase",
   "version": "1.0.0",
   "engines": {
     "node": "8.16.x"
