@@ -11,7 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "classnames": "^2.2.6",
-    "dompurify": "^2.0.8",
+    "dompurify": "^2.0.17",
     "express": "^4.17.1",
     "express-favicon": "^2.0.1",
     "moment": "^2.24.0",
